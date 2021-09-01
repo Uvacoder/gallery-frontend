@@ -1,7 +1,15 @@
-import { greet } from "./utils/greet";
+import ViewPosts from "./components/ViewPosts";
+import SmallCentered from "./components/Footer";
+
+import { ChakraProvider } from "@chakra-ui/react";
 
 function App(): JSX.Element {
-  return <h1>{greet("World")}</h1>;
+  return (
+    <ChakraProvider>
+      <ViewPosts />
+      <SmallCentered />
+    </ChakraProvider>
+  );
 }
 
 export default App;
