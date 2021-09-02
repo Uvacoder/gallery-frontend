@@ -11,7 +11,6 @@ import {
 import { FaChrome, FaTwitter, FaYoutube } from "react-icons/fa";
 import { ReactNode } from "react";
 import brush from "../utils/brush.png";
-import canvas from "../utils/canvas.png";
 
 const SocialButton = ({
   children,
@@ -50,6 +49,7 @@ export default function Footer(): JSX.Element {
     <Box
       bg={useColorModeValue("gray.50", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}
+      mt={10}
     >
       <Container
         as={Stack}

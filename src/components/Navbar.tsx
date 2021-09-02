@@ -23,7 +23,7 @@ import {
 
 import brush from "../utils/brush.png";
 
-export default function WithSubnavigation() {
+export default function WithSubnavigation(): JSX.Element {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
