@@ -1,13 +1,17 @@
+import Navbar from "./components/Navbar";
+import SearchBar from "./components/SearchBar";
 import ViewPosts from "./components/ViewPosts";
-import SmallCentered from "./components/Footer";
+import Footer from "./components/Footer";
 
 import { ChakraProvider } from "@chakra-ui/react";
 
 function App(): JSX.Element {
   return (
     <ChakraProvider>
+      <Navbar />
+      <SearchBar />
       <ViewPosts />
-      <SmallCentered />
+      <Footer />
     </ChakraProvider>
   );
 }

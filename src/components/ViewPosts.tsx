@@ -82,7 +82,6 @@ function ViewPosts(): JSX.Element {
       setDataProvider(dataProvider);
       setCountry(country);
       setSource(edmIsShownAt);
-      
     } catch (err) {
       console.error(err.message);
     }
