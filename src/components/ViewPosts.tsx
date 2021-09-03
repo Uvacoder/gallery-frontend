@@ -10,20 +10,15 @@ import {
 } from "@chakra-ui/react";
 
 import { IProp } from "../utils/types";
-import { SearchBarProps } from "../utils/types";
+import { ViewPostsProps } from "../utils/types";
 
 function ViewPosts({ 
   searchTerm, 
-  setSearchTerm,
-}: SearchBarProps): any {
+}: ViewPostsProps): any {
   const [data, setData] = useState<IProp[]>([]);
-
+  
   // fetch all posts
   const getPosts = async () => {
-    const searchTerm = "dali";
-    // setSearchTerm(searchTerm);
-    // examples: "Uomini  Swatow", "salvador dali", "vinci"
-
     try {
       const response = await fetch(
         `https://api.europeana.eu/record/v2/search.json?profile=standard&query=${searchTerm}&rows=6&start=1&wskey=eutabilla`
@@ -40,8 +35,8 @@ function ViewPosts({
 
   useEffect(() => {
     getPosts();
-  }, []);
-  // [] makes one request
+  }, [searchTerm]);
+  // [] do it at the end of the first render but also anytime searchterm changes
 
   console.log(data, "this is jsondata");
   return data.map((item: any, index: any) => (

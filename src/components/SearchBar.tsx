@@ -1,10 +1,12 @@
 import { Input, Button, Stack, Text, Center } from "@chakra-ui/react";
 import { Box, Heading } from "@chakra-ui/react";
+import { useState } from "react";
 
 import { SearchBarProps } from "../utils/types";
 
-function SearchBar({ searchTerm, setSearchTerm }: SearchBarProps): JSX.Element {
-  //   const [searchTerm, setSearchTerm] = useState("");
+
+function SearchBar({ setSearchTermFinal }: SearchBarProps): JSX.Element {
+    const [searchTerm, setSearchTerm] = useState("");
   return (
     <div>
       <Stack spacing={8} mt={2}>
@@ -37,7 +39,9 @@ function SearchBar({ searchTerm, setSearchTerm }: SearchBarProps): JSX.Element {
           setSearchTerm(event.target.value);
         }}
       />
-      <Button colorScheme="teal" variant="outline" paddingStart="4" maxW={"lg"}>
+      <Button colorScheme="teal" variant="outline" paddingStart="4" maxW={"lg"}
+        onClick = {() => setSearchTermFinal(searchTerm)}
+      >
         Search
       </Button>
     </div>
