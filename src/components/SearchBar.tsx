@@ -21,7 +21,7 @@ function SearchBar({ setSearchTermFinal }: SearchBarProps): JSX.Element {
           </Heading>
           <Text mt={4} color={"gray.600"} textAlign="center">
             Discover inspiring art, artists and stories in the digitised
-            collections of European museums, galleries, ibraries and archives.
+            collections of European museums, galleries, libraries and archives.
             Explore paintings, drawings, engravings and sculpture from cultural
             heritage institutions across Europe.
           </Text>
@@ -30,7 +30,7 @@ function SearchBar({ setSearchTermFinal }: SearchBarProps): JSX.Element {
       <Input
         maxW={"lg"}
         mt={5}
-        ml={1}
+        ml={10}
         alignContent={"center"}
         placeholder="Search your favourite artist or media"
         value={searchTerm}
@@ -47,6 +47,15 @@ function SearchBar({ setSearchTermFinal }: SearchBarProps): JSX.Element {
       >
         Search
       </Button>
+      <Text mt={4} ml={10} color={"gray.600"} textAlign="center" fontSize={"14px"}>
+      <b>Need inspiration?</b> 
+      <i> London Photography,</i>
+      <i> ,</i>
+      <i> James Barnor,</i>
+      <i> John Martin,</i>
+      <i> Frida Kahlo,</i>
+      <i> Salvador Dali</i>
+       </Text>
     </div>
   );
 }

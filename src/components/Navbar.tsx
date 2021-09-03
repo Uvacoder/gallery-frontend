@@ -31,7 +31,7 @@ export default function WithSubnavigation(): JSX.Element {
       <Flex
         bg={useColorModeValue("gray.50", "gray.900")}
         color={useColorModeValue("gray.700", "gray.200")}
-        minH={"80px"}
+        minH={"70px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderBottom={1}
