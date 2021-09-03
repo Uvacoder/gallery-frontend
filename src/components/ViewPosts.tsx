@@ -19,6 +19,7 @@ function ViewPosts({
   
   // fetch all posts
   const getPosts = async () => {
+    const searchTerm = "frida"; 
     try {
       const response = await fetch(
         `https://api.europeana.eu/record/v2/search.json?profile=standard&query=${searchTerm}&rows=6&start=1&wskey=eutabilla`
