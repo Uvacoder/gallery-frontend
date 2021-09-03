@@ -1,15 +1,16 @@
 export interface ICard {
-  dcCreator: any;
-  year: any;
-  title: any;
-  dcTitleLangAware: any;
-  edmIsShownBy: any;
-  edmPreview: any;
-  dcDescription: any;
-  dcDescriptionLangAware: any;
-  dataProvider: any;
-  country: any;
-  edmIsShownAt: any;
+  dcCreator: string;
+  year: string;
+  title: string;
+  dcTitleLangAware: string;
+  edmIsShownBy: string;
+  edmPreview: string;
+  dcDescription: string;
+  dcDescriptionLangAware: string;
+  dataProvider: string;
+  country: string;
+  edmIsShownAt: string;
+  source: string;
 }
 
 export interface IProp {
