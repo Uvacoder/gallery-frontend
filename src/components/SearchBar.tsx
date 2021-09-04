@@ -56,7 +56,6 @@ function SearchBar({ setSearchTermFinal }: SearchBarProps): JSX.Element {
       >
         <b>Need inspiration?</b>
         <i> London Photography,</i>
-        <i> ,</i>
         <i> James Barnor,</i>
         <i> John Martin,</i>
         <i> Frida Kahlo,</i>
