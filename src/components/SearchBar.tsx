@@ -47,15 +47,21 @@ function SearchBar({ setSearchTermFinal }: SearchBarProps): JSX.Element {
       >
         Search
       </Button>
-      <Text mt={4} ml={10} color={"gray.600"} textAlign="center" fontSize={"14px"}>
-      <b>Need inspiration?</b> 
-      <i> London Photography,</i>
-      <i> ,</i>
-      <i> James Barnor,</i>
-      <i> John Martin,</i>
-      <i> Frida Kahlo,</i>
-      <i> Salvador Dali</i>
-       </Text>
+      <Text
+        mt={4}
+        ml={10}
+        color={"gray.600"}
+        textAlign="center"
+        fontSize={"14px"}
+      >
+        <b>Need inspiration?</b>
+        <i> London Photography,</i>
+        <i> ,</i>
+        <i> James Barnor,</i>
+        <i> John Martin,</i>
+        <i> Frida Kahlo,</i>
+        <i> Salvador Dali</i>
+      </Text>
     </div>
   );
 }

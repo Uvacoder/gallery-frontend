@@ -52,7 +52,14 @@ function ViewPosts({ searchTerm }: ViewPostsProps): JSX.Element {
 
   return (
     <>
-      <SimpleGrid columns={3} minChildWidth="30%" spacing="20px" py={6} mx={10} mb={10}>
+      <SimpleGrid
+        columns={3}
+        minChildWidth="30%"
+        spacing="20px"
+        py={6}
+        mx={10}
+        mb={10}
+      >
         {data.map((item: ICard, index: number) => (
           <div key={index}>
             <Box
