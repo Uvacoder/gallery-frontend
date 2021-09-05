@@ -83,7 +83,7 @@ export default function Footer(): JSX.Element {
           justify={{ base: "center", md: "space-between" }}
           align={{ base: "center", md: "center" }}
         >
-          <Text>© 2020 Chakra Templates. All rights reserved</Text>
+          <Text>© 2021 All rights reserved</Text>
           <Stack direction={"row"} spacing={6}>
             <SocialButton
               label={"Twitter"}
