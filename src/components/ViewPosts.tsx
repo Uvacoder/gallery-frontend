@@ -12,7 +12,7 @@ import { ICard } from "../utils/types";
 import { ViewPostsProps } from "../utils/types";
 
 function ViewPosts({ searchTerm }: ViewPostsProps): JSX.Element {
-  const [data, setData] = useState<ICard[]>([]);
+  const [recordData, setRecordData] = useState<ICard[]>([]);
 
   // fetch default art collection
   const getPosts = async () => {
@@ -22,9 +22,10 @@ function ViewPosts({ searchTerm }: ViewPostsProps): JSX.Element {
       );
       const jsonData = await response.json();
       const items = jsonData.items;
-      // console.log(first)
 
-      setData(items);
+      setRecordData(items);
+
+
     } else {
       // fetch art based on search result
       try {
@@ -33,9 +34,9 @@ function ViewPosts({ searchTerm }: ViewPostsProps): JSX.Element {
         );
         const jsonData = await response.json();
         const items = jsonData.items;
-        // console.log(first)
 
-        setData(items);
+        setRecordData(items);
+
       } catch (err) {
         console.error(err.message);
       }
@@ -44,11 +45,9 @@ function ViewPosts({ searchTerm }: ViewPostsProps): JSX.Element {
 
   useEffect(() => {
     getPosts();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTerm]);
   // [] calls function on the first render but also anytime searchterm is updated
 
-  console.log(data, "this is jsondata");
 
   return (
     <>
@@ -60,7 +59,7 @@ function ViewPosts({ searchTerm }: ViewPostsProps): JSX.Element {
         mx={10}
         mb={10}
       >
-        {data.map((item: ICard, index: number) => (
+        {recordData.map((item: ICard, index: number) => (
           <div key={index}>
             <Box
               maxW={"445px"}
