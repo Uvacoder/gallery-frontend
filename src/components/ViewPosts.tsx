@@ -45,6 +45,7 @@ function ViewPosts({ searchTerm }: ViewPostsProps): JSX.Element {
 
   useEffect(() => {
     getPosts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTerm]);
   // [] calls function on the first render but also anytime searchterm is updated
 
